@@ -1,0 +1,40 @@
+{{define "title"}}{{title .Thread.Title}}{{end}}
+
+{{define "page_class"}}post post_index{{end}}
+
+{{define "content"}}
+
+{{$thread := .Thread}}
+{{$create_post_url := url "create_thread_post" "thread_id" (.Thread.Id|string)}}
+
+<a href="{{$create_post_url}}">Create new post.</a>
+
+<h2>{{.Thread.Title}}</h2>
+
+<ol>
+  {{range $idx, $post := .Posts}}
+  <li>
+    <p>
+      <span class="idx">{{add $idx 1}}.</span>
+      <span class="name">{{$post.Name | default $thread.DefaultName | default "Anonymous"}}</span>
+      <span class="date">{{$post.CreatedAt}}</span>
+    </p>
+    <p>{{$post.Content}}</p>
+  </li>
+  {{end}}
+</ol>
+
+<hr>
+
+<form method="POST" action="{{$create_post_url}}">
+  <p>
+    <label for="post_name">Name:</label>
+    <input id="post_name" name="post_name" type="text" placeholder="name">
+  </p>
+  <p>
+    <textarea name="post_content" placeholder="content"></textarea>
+  </p>
+  <button>Submit</button>
+</form>
+
+{{end}}

@@ -1,0 +1,9 @@
+
+body {
+  background: #EEE;
+}
+
+.post_index ol {
+  list-style-type: none;
+  padding-left: 0px;
+}

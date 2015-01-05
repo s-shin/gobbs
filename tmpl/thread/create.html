@@ -1,0 +1,32 @@
+{{define "title"}}{{title "Create Thread"}}{{end}}
+
+{{define "page_class"}}thread thread_create{{end}}
+
+{{define "content"}}
+
+<div class="alert">
+  {{.Error}}
+</div>
+
+<form method="POST" action="">
+  <h2>Create Thread</h2>
+  <p>
+    <label for="thread_title">Thread Title:</label>
+    <input id="thread_title" name="thread_title" type="text" placeholder="title">
+  </p>
+  <p>
+    <label for="default_name">Default Name:</label>
+    <input id="thread_default_name" name="thread_default_name" type="text" placeholder="default name">
+  </p>
+  <h2>First Post</h2>
+  <p>
+    <label for="post_name">Name:</label>
+    <input id="post_name" name="post_name" type="text" placeholder="name">
+  </p>
+  <p>
+    <textarea name="post_content" placeholder="content"></textarea>
+  </p>
+  <button>Submit</button>
+</form>
+
+{{end}}

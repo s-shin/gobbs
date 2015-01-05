@@ -1,0 +1,3 @@
+db:
+  master: "test.sqlite3"
+  slave: "test.sqlite3"

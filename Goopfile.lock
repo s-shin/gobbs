@@ -1,0 +1,10 @@
+github.com/facebookgo/clock #41df9c4b742349146d28ac5d8caa45161209f3fc
+github.com/facebookgo/grace #1b0609c25d1f0d6aefdd5404eaa710a16daca9d6
+github.com/facebookgo/httpdown #1c143bb4362a4f297f9cabd74bf0d05ee2b4f5dc
+github.com/facebookgo/stats #a8126df93b2406675168d2930b6d3db46ffb805c
+github.com/gorilla/context #215affda49addc4c8ef7e2534915df2c8c35c6cd
+github.com/gorilla/handlers #0e84b7d810c16aed432217e330206be156bafae0
+github.com/gorilla/mux #e444e69cbd2e2e3e0749a2f3c717cec491552bbf
+github.com/jteeuwen/go-bindata/... #452770b02410b07062e93faa9095411a2e1ee2e5
+github.com/mattn/go-sqlite3 #4c5aec8622e1523fa8f82a2ecb1a20cb039a33ec
+gopkg.in/yaml.v2 #d466437aa4adc35830964cffc5b5f262c63ddcb4

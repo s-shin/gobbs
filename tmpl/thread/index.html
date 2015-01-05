@@ -1,0 +1,22 @@
+{{define "title"}}{{title "Thread List"}}{{end}}
+
+{{define "page_class"}}thread thread_index{{end}}
+
+{{define "content"}}
+<nav>
+  <ul>
+    <li><a href="{{url "create_thread"}}">Create new thread</a></li>
+  </ul>
+</nav>
+<h2>Thread List</h2>
+<ul>
+  {{range $idx, $thread := .Threads}}
+  <li>
+    <a href="{{url "show_thread_posts" "thread_id" ($thread.Id|string)}}">{{$thread.Title}} ({{$thread.PostNum}})</a>
+    <span class="date">{{$thread.UpdatedAt}}</span>
+  </li>
+  {{else}}
+  <li>No thread yet. <a href="{{url "create_thread"}}">Let's create a thread.</a></li>
+  {{end}}
+</ul>
+{{end}}

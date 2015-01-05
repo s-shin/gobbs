@@ -1,0 +1,13 @@
+/tmp/
+
+# zip files
+*.zip
+
+# DB files
+*.sqlite3
+
+# for goop
+/.vendor/
+
+# for go-bindata
+/bindata/production.go

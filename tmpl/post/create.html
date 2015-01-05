@@ -1,0 +1,23 @@
+{{define "title"}}{{title "Create Post"}}{{end}}
+
+{{define "page_class"}}post post_create{{end}}
+
+{{define "content"}}
+
+<div class="alert">
+  {{.Error}}
+</div>
+
+<form method="POST" action="">
+  <h2>Create Post</h2>
+  <p>
+    <label for="post_name">Name:</label>
+    <input id="post_name" name="post_name" type="text" placeholder="name">
+  </p>
+  <p>
+    <textarea name="post_content" placeholder="content"></textarea>
+  </p>
+  <button>Submit</button>
+</form>
+
+{{end}}
